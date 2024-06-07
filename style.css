@@ -1,3 +1,8 @@
+:root {
+    --shador-default: 5px 5px 10px rgb(0, 0, 0);
+}
+
+
 html{
     cursor: url(imagens/mata_mosca.png) 30 30, auto;
 }
@@ -7,9 +12,6 @@ body{
     height: 100%;
     background: url(imagens/bg.jpg) repeat-y;
     background-size: 100%;
-
-    
-    
 }
 
 .mosquito1{
@@ -62,17 +64,40 @@ body{
     justify-content: center;
 }
 
+#box-new-game {
+    flex-direction: column;
+    display: flex;
+    max-width: 300px;
+    justify-content: center;
+    background-color: #8fd78f;
+    border-radius: 4px;
+    padding: 1em;
+    box-shadow: var(--shador-default);
+    margin-top: 1em;
+}
+
+@media (max-width: 600px) {
+    #box-new-game {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
 #newGame{
-    border-radius: 25px;
+    border-radius: 4px;
     background: #824E20;
     color: white;
     font-size: 2em;
     line-height:1.3;
     padding: 10px 15px;
-    box-shadow: 5px 5px 10px rgb(0, 0, 0);
+    flex: 1 1 100%;
+    border: none;
 }
 
 #dificuldade{
-    margin: 20px 0;
+    margin-bottom: 1em;
     font-size: 1.1em;
+    flex: 1 1 100%;
+    padding: 1em;
+    border-radius: 4px;
 }
