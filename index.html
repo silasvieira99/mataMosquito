@@ -1,54 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Mata Mosquito | Jogar</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script>
-        
-        function iniciarGame(){
+        <link rel="stylesheet" href="style.css" />
+        <title>Mata Mosquito | Jogar</title>
 
-            var nivel = document.getElementById('dificuldade').value
+        <script>
+            function iniciarGame() {
+                var nivel = document.getElementById("dificuldade").value;
 
-            if(nivel === ''){
-                alert('Selecione um nível para iniciar o jogo')
-                return false
+                if (nivel === "") {
+                    alert("Selecione um nível para iniciar o jogo");
+                    return false;
+                }
+
+                window.location.href = "game.html?" + nivel;
             }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="centralizar">
+                <img src="imagens/game.png" />
+            </div>
 
-            window.location.href = 'game.html?' + nivel
-
-        }
-
-    </script>
-
-
-</head>
-<body>
-    
-    <div class="container">
-
-        <div class="centralizar">
-            <img src="imagens/game.png" >
+            <div class="centralizar">
+                <div id="box-new-game">
+                    <select name="" id="dificuldade">
+                        <option value="">-- Selecione a Dificuldade --</option>
+                        <option value="normal">Normal</option>
+                        <option value="dificil">Difícil</option>
+                        <option value="lendario">Lendário</option>
+                    </select>
+                    <button id="newGame" onclick="iniciarGame()">
+                        Começar
+                    </button>
+                </div>
+            </div>
         </div>
-
-        <div class="centralizar">
-            <select name="" id="dificuldade">
-                <option value="">-- Selecione a Dificuldade --</option>
-                <option value="normal">Normal</option>
-                <option value="dificil">Difícil</option>
-                <option value="lendario">Lendário</option>
-            </select>
-        </div>
-
-        <div class="centralizar">
-            <button id="newGame" onclick="iniciarGame()">Começar</button>
-        </div>
-
-    </div>
-
-
-
-</body>
+    </body>
 </html>
